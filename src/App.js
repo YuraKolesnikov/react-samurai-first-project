@@ -9,19 +9,19 @@ import News from './components/News/News'
 import Music from './components/Music/Music'
 import Settings from './components/Settings/Settings'
 
-import { state, createMessage, createPost } from './state'
+import { store } from './state'
 
 const App = () => {
   const dialogProps = {
-    createMessage,
-    users: state.users,
-    messages: state.messages
+    createMessage: store.createMessage.bind(store),
+    users: store.state.users,
+    messages: store.state.messages
   }
 
   const profileProps = {
-    createPost,
-    newMessage: state.newMessage,
-    posts: state.posts
+    createPost: store.createPost.bind(store),
+    newMessage: store.state.newMessage,
+    posts: store.state.posts
   }
 
   return (

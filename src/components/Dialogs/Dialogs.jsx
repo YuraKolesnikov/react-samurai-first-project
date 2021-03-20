@@ -21,7 +21,7 @@ const Dialogs = ({ users, messages, createMessage }) => {
       <UsersList users={users} />
       <MessageList messages={messages} />
       <form action="/" onSubmit={submit}>
-        <textarea ref={textarea}></textarea>
+        <textarea ref={textarea}/>
         <button type="submit">Send</button>
       </form>
     </div>

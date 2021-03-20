@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import { subscribe } from './state'
+import { store } from './state'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -20,4 +20,4 @@ const renderApp = () => {
   );
 }
 
-subscribe(renderApp)
+store.subscribe(renderApp)
