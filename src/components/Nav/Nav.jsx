@@ -16,6 +16,7 @@ const Nav = () => {
         links.map(link => (
           <NavLink
             to={link.to}
+            key={link.to}
             className={classes.item}
             activeClassName={classes.active}>
             { link.label }

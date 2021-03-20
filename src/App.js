@@ -9,9 +9,20 @@ import News from './components/News/News'
 import Music from './components/Music/Music'
 import Settings from './components/Settings/Settings'
 
-import { users, messages, posts } from './data'
+import { state, createMessage, createPost } from './state'
 
 const App = () => {
+  const dialogProps = {
+    createMessage,
+    users: state.users,
+    messages: state.messages
+  }
+
+  const profileProps = {
+    newMessage: state.newMessage,
+    posts: state.posts
+  }
+
   return (
     <div className={classes.App}>
       <BrowserRouter>
@@ -20,11 +31,11 @@ const App = () => {
         <div className={classes.Content}>
           <Route
             path="/dialogs"
-            render={ () => <Dialogs users={users} messages={messages} /> }
+            render={ () => <Dialogs { ...dialogProps } /> }
           />
           <Route
             path="/profile"
-            render={ () => <Profile posts={posts} /> }
+            render={ () => <Profile { ...profileProps } /> }
           />
           <Route path="/news" component={News} />
           <Route path="/music" component={Music} />

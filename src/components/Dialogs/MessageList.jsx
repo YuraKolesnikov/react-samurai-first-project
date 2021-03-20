@@ -7,7 +7,7 @@ const MessageList = props => {
     )
   }
 
-  const msgList = props.messages.map(m => <Message message={m.text} />)
+  const msgList = props.messages.map(m => <Message key={m.id} message={m.text} />)
 
   return (
     <div className={classes.MessageList}>

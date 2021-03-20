@@ -3,7 +3,7 @@ import classes from './MyPosts.module.css'
 import Post from './Post/Post'
 
 const MyPosts = ({ posts }) => {
-  const postsList = posts.map(p => <Post text={p.text} />)
+  const postsList = posts.map(p => <Post key={p.id} text={p.text} />)
   return (
     <ul className={classes.MyPosts}>
       { postsList }

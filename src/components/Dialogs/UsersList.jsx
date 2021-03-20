@@ -14,7 +14,7 @@ const UsersList = props => {
     )
   }
 
-  const usersList = props.users.map(u => <Name id={u.id} name={u.name} />)
+  const usersList = props.users.map(u => <Name key={u.id} id={u.id} name={u.name} />)
 
   return (
     <div className={classes.Names}>
