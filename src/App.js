@@ -9,6 +9,8 @@ import News from './components/News/News'
 import Music from './components/Music/Music'
 import Settings from './components/Settings/Settings'
 
+import { users, messages, posts } from './data'
+
 const App = () => {
   return (
     <div className={classes.App}>
@@ -16,8 +18,14 @@ const App = () => {
         <Header />
         <Nav />
         <div className={classes.Content}>
-          <Route path="/dialogs" component={Dialogs} />
-          <Route path="/profile" component={Profile} />
+          <Route
+            path="/dialogs"
+            render={ () => <Dialogs users={users} messages={messages} /> }
+          />
+          <Route
+            path="/profile"
+            render={ () => <Profile posts={posts} /> }
+          />
           <Route path="/news" component={News} />
           <Route path="/music" component={Music} />
           <Route path="/settings" component={Settings} />

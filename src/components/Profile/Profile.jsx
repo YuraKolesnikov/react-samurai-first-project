@@ -3,7 +3,7 @@ import classes from './Profile.module.css'
 import MyPosts from './MyPosts/MyPosts'
 import ProfileInfo from './ProfileInfo/ProfileInfo'
 
-const Profile = () => {
+const Profile = ({ posts }) => {
   return (
     <div>
       <ProfileInfo />
@@ -13,7 +13,7 @@ const Profile = () => {
         <button>Send</button>
         <button>Delete</button>
       </div>
-      <MyPosts />
+      <MyPosts posts={posts} />
     </div>
   )
 }
