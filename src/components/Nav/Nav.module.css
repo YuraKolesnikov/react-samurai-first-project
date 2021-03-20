@@ -1,10 +1,16 @@
 .Nav {
   grid-area: navbar;
+  padding: 10px;
+  display: flex;
+  flex-flow: column;
   border: 1px solid tomato;
 }
 
 .item {
   color: teal;
+  font-size: 20px;
+  margin-bottom: 5px;
+  text-decoration: none;
 }
 
 .item.active {
