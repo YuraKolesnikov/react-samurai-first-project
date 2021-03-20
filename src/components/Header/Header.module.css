@@ -1,0 +1,9 @@
+.Header {
+  grid-area: header;
+  border: 1px solid teal;
+}
+
+.Header img {
+  max-height: 100%;
+  width: auto;
+}

@@ -1,0 +1,12 @@
+.Nav {
+  grid-area: navbar;
+  border: 1px solid tomato;
+}
+
+.item {
+  color: teal;
+}
+
+.item.active {
+  color: tomato;
+}

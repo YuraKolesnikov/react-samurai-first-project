@@ -13,22 +13,12 @@
   border: 1px solid cornflowerblue;
 }
 
-.Header {
-  grid-area: header;
-  border: 1px solid teal;
-}
-
-.Header img {
-  max-height: 100%;
-  width: auto;
-}
-
-.Nav {
-  grid-area: navbar;
-  border: 1px solid tomato;
-}
-
 .Content {
   grid-area: content;
   border: 1px solid burlywood;
+}
+
+.Content img {
+  max-width: 100%;
+  height: auto;
 }
