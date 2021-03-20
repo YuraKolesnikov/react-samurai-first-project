@@ -19,6 +19,7 @@ const App = () => {
   }
 
   const profileProps = {
+    createPost,
     newMessage: state.newMessage,
     posts: state.posts
   }

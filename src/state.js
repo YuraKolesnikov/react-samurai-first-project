@@ -1,11 +1,18 @@
+let updateDom = () => {}
+
 export const createMessage = message => {
   state.messages.push(message)
-  console.log(state.messages)
+  updateDom()
 }
 
 export const createPost = post => {
   state.posts.push(post)
-  console.log(state.posts)
+  state.newMessage = ''
+  updateDom()
+}
+
+export const subscribe = observer => {
+  updateDom = observer
 }
 
 export const state = {
